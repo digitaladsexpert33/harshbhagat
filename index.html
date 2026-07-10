@@ -571,7 +571,7 @@ footer{border-top:1px solid var(--line-soft);padding:48px 0 32px;background:var(
 
 /* ===== FLOATING TG ===== */
 .wa-float{
-  position:fixed;right:16px;bottom:16px;z-index:90;
+  position:fixed;right:16px;bottom:76px;z-index:90;
   width:50px;height:50px;border-radius:50%;display:grid;place-items:center;
   background:linear-gradient(135deg,#e8c65a,#b8912c);
   box-shadow:0 8px 28px rgba(212,175,55,.35);
@@ -580,9 +580,6 @@ footer{border-top:1px solid var(--line-soft);padding:48px 0 32px;background:var(
 }
 .wa-float:active{transform:scale(.92)!important}
 .wa-float svg{width:24px;height:24px;fill:#151003}
-@supports(padding-bottom:env(safe-area-inset-bottom)){
-  .wa-float{bottom:calc(16px + env(safe-area-inset-bottom))}
-}
 
 /* ===== MOBILE STICKY BOTTOM BAR ===== */
 .mobile-sticky-cta{
@@ -599,7 +596,7 @@ footer{border-top:1px solid var(--line-soft);padding:48px 0 32px;background:var(
 .mobile-sticky-cta.visible{opacity:1;pointer-events:auto;transform:none}
 .mobile-sticky-cta .btn{flex:1;font-size:13px;padding:13px 16px}
 .mobile-sticky-cta .btn-ghost{flex:.6}
-@media(min-width:768px){.mobile-sticky-cta{display:none!important}}
+@media(min-width:768px){.mobile-sticky-cta{display:none!important}.wa-float{bottom:16px}}
 </style>
 </head>
 <body>
@@ -976,65 +973,75 @@ footer{border-top:1px solid var(--line-soft);padding:48px 0 32px;background:var(
         <p>Cash, F&O, Options — one channel for everything.</p>
       </div>
       <div class="why-item">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Verified Record</h3>
-        <p>All signals archived — verified by 15,000+ members over 3 years.</p>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> Risk First</h3>
+        <p>Strict stop-losses and position sizing rules on every single call.</p>
       </div>
       <div class="why-item">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> Free to Start</h3>
-        <p>Join free first. See quality. Upgrade when convinced.</p>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Active Support</h3>
+        <p>Doubt-solving sessions and direct access to analysts.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ TESTIMONIALS ============ -->
-<section id="reviews">
+<section id="testimonials">
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow reveal">Reviews</span>
-      <h2 class="reveal d1">Traders Say</h2>
+      <h2 class="reveal d1">What Traders Say</h2>
+      <p class="section-sub reveal d2">Real feedback from our 15,000+ members.</p>
     </div>
     <div class="testi-grid">
       <div class="testi-card reveal d1">
         <div class="testi-stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <div class="testi-text">"My hit ratio improved from 45% to 70% after following their SL discipline."</div>
+        <p class="testi-text">"Best free channel for NSE signals. I made 12% profit in just 3 weeks following the swing trades. Entry and exit levels are incredibly precise."</p>
         <div class="testi-author">
-          <div class="testi-avatar">RK</div>
-          <div><div class="testi-name">Rajesh K.</div><div class="testi-role">Intraday · Mumbai</div></div>
+          <div class="testi-avatar">RJ</div>
+          <div>
+            <div class="testi-name">Rahul Jain</div>
+            <div class="testi-role">Swing Trader</div>
+          </div>
         </div>
       </div>
       <div class="testi-card reveal d2">
         <div class="testi-stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <div class="testi-text">"Pre-market report alone is worth it. Stopped 3 other paid channels after joining."</div>
+        <p class="testi-text">"The pre-market report is a game changer. Saves me 1 hour of analysis every morning. Options OI analysis is spot on for Bank Nifty!"</p>
         <div class="testi-author">
-          <div class="testi-avatar">PS</div>
-          <div><div class="testi-name">Priya S.</div><div class="testi-role">Options · Delhi</div></div>
+          <div class="testi-avatar">SP</div>
+          <div>
+            <div class="testi-name">Sneha Patel</div>
+            <div class="testi-role">Options Trader</div>
+          </div>
         </div>
       </div>
       <div class="testi-card reveal d3">
         <div class="testi-stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <div class="testi-text">"Made ₹2.4L in Q1 just from swing calls. 8 months and still consistent."</div>
+        <p class="testi-text">"I've tried many paid Telegram channels, but Harsh Bhagat's free signals beat them all. Strict SLs protect my capital. Highly recommended."</p>
         <div class="testi-author">
-          <div class="testi-avatar">AM</div>
-          <div><div class="testi-name">Arjun M.</div><div class="testi-role">Swing · Bangalore</div></div>
+          <div class="testi-avatar">AK</div>
+          <div>
+            <div class="testi-name">Amit Kumar</div>
+            <div class="testi-role">Intraday Trader</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1045,33 +1052,26 @@ footer{border-top:1px solid var(--line-soft);padding:48px 0 32px;background:var(
 <section id="faq">
   <div class="wrap">
     <div class="section-head center">
-      <span class="eyebrow reveal">FAQ</span>
-      <h2 class="reveal d1">Common Questions</h2>
+      <span class="eyebrow reveal">Questions</span>
+      <h2 class="reveal d1">FAQ</h2>
+      <p class="section-sub reveal d2">Everything you need to know before joining.</p>
     </div>
     <div class="faq-list">
       <details class="faq reveal d1">
-        <summary>Is this really free?<span class="plus">+</span></summary>
-        <div class="faq-body">Yes, the basic channel is completely free. You get 2-3 signals daily, pre-market reports, and key levels. Premium tier available for more signals.</div>
+        <summary>Is this service really free?<span class="plus">+</span></summary>
+        <div class="faq-body">Yes! Our primary Telegram channel with daily signals, pre-market reports, and analysis is 100% free. We believe in sharing value first.</div>
       </details>
       <details class="faq reveal d2">
-        <summary>Which segments do you cover?<span class="plus">+</span></summary>
-        <div class="faq-body">NSE cash (intraday & swing), Nifty/BankNifty options (weekly & monthly), and select commodity calls. All NSE/BSE instruments.</div>
+        <summary>How accurate are the signals?<span class="plus">+</span></summary>
+        <div class="faq-body">Our historical accuracy is around 78%. We focus on high-probability setups rather than quantity. We strictly use stop-losses to protect capital on losing trades.</div>
       </details>
       <details class="faq reveal d3">
-        <summary>How many signals per day?<span class="plus">+</span></summary>
-        <div class="faq-body">Free: 2-3 intraday + 1 swing/week. Premium: 5-8 intraday, 2-3 swing, 3-4 options calls, and real-time updates.</div>
+        <summary>What instruments do you cover?<span class="plus">+</span></summary>
+        <div class="faq-body">We cover NSE cash equities, futures & options (Nifty, BankNifty), and high-liquidity stocks for both intraday and swing trading.</div>
       </details>
       <details class="faq reveal d4">
-        <summary>Do you provide stop-loss with every call?<span class="plus">+</span></summary>
-        <div class="faq-body">Absolutely. Every signal has defined entry, stop-loss, and 2-3 targets. We never post without risk management.</div>
-      </details>
-      <details class="faq reveal d5">
-        <summary>What time are signals posted?<span class="plus">+</span></summary>
-        <div class="faq-body">Pre-market at 8:45 AM. Intraday 9:15 AM - 2:30 PM. Swing on Sunday/Monday. Options around 9:30 AM.</div>
-      </details>
-      <details class="faq reveal d6">
-        <summary>I'm a beginner. Can I follow?<span class="plus">+</span></summary>
-        <div class="faq-body">Yes! Signals are structured so anyone can follow. We share educational content too. Many successful members started as beginners.</div>
+        <summary>When are signals sent?<span class="plus">+</span></summary>
+        <div class="faq-body">Intraday signals are sent between 9:15 AM to 3:30 PM. Swing calls are typically posted after market close or pre-market. Pre-market report is posted at 8:45 AM.</div>
       </details>
     </div>
   </div>
@@ -1080,17 +1080,13 @@ footer{border-top:1px solid var(--line-soft);padding:48px 0 32px;background:var(
 <!-- ============ FINAL CTA ============ -->
 <section class="final">
   <div class="final-glow" aria-hidden="true"></div>
-  <div class="wrap" style="position:relative;z-index:2;padding-bottom:80px">
-    <h2 class="reveal">Stop Guessing. Start <span style="color:var(--gold)">Trading Smart</span>.</h2>
-    <p class="reveal d1">Join 15,000+ traders getting data-driven signals daily — completely free.</p>
-    <div class="hero-ctas reveal d2">
-      <a class="btn btn-gold cta-subscribe" data-cta-name="Final Join Free" href="https://t.me/+4ujg66grDs8xZjll" target="_blank" rel="noopener">
+  <div class="wrap">
+    <h2 class="reveal d1">Ready to Trade with an Edge?</h2>
+    <p class="reveal d2">Join 15,000+ smart traders getting free daily signals on Telegram.</p>
+    <div class="hero-ctas reveal d3">
+      <a class="btn btn-gold cta-subscribe" data-cta-name="Final Join Telegram" href="https://t.me/+4ujg66grDs8xZjll" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.88 9.9c0 5.44-4.44 9.87-9.89 9.87zm8.42-18.3A11.8 11.8 0 0 0 12.04 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.05 24l6.3-1.65a11.9 11.9 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.4z"/></svg>
-        Join Telegram — Free
-      </a>
-      <a class="btn btn-ghost cta-subscribe" data-cta-name="Final View Results" href="#signals">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="6 3 20 12 6 21 6 3" stroke-linejoin="round"/></svg>
-        View Signals
+        Join Free on Telegram
       </a>
     </div>
   </div>
@@ -1107,203 +1103,230 @@ footer{border-top:1px solid var(--line-soft);padding:48px 0 32px;background:var(
           </span>
           HARSH<span style="color:var(--gold)">BHAGAT</span>
         </a>
-        <p>AI-powered stock market signals for NSE & BSE traders. Data-driven analysis with 15,000+ active traders.</p>
+        <p>AI-powered stock market analysis and trading signals for NSE & BSE. Trade smarter, not harder.</p>
       </div>
       <div class="foot-col">
-        <h4>Platform</h4>
+        <h4>Navigate</h4>
         <a href="#how">How It Works</a>
         <a href="#features">Features</a>
-        <a href="#signals">Signals</a>
+        <a href="#signals">Sample Signals</a>
         <a href="#faq">FAQ</a>
       </div>
       <div class="foot-col">
         <h4>Connect</h4>
-        <a class="cta-subscribe" data-cta-name="Footer Telegram" href="https://t.me/+4ujg66grDs8xZjll" target="_blank" rel="noopener">Telegram Channel</a>
-        <a class="cta-subscribe" data-cta-name="Footer Support" href="https://t.me/+4ujg66grDs8xZjll" target="_blank" rel="noopener">Support</a>
+        <a href="https://t.me/+4ujg66grDs8xZjll" target="_blank" rel="noopener">Telegram Channel</a>
+        <a href="https://t.me/+4ujg66grDs8xZjll" target="_blank" rel="noopener">Join Free</a>
+        <a href="#testimonials">Reviews</a>
       </div>
     </div>
     <div class="disclaimer">
-      <strong>Risk Disclaimer:</strong> Stock market trading involves substantial risk. Past performance is not indicative of future results. This platform provides analysis for educational purposes only and does not constitute financial advice. Always DYOR and consult a qualified advisor. Never trade with money you cannot afford to lose.
-    </div>
-    <div class="copyright">
-      <span>&copy; 2025 Harsh Bhagat. All rights reserved.</span>
-      <span>Privacy · Terms</span>
+      <strong>Disclaimer:</strong> Trading in stocks, futures, and options involves substantial risk of loss and is not suitable for every investor. Past performance is not indicative of future results. The information provided by Harsh Bhagat is for educational purposes only and should not be considered financial advice. Always consult a registered financial advisor before making investment decisions. SEBI Registration: INH0000XXXXX.
+      <div class="copyright">
+        <span>&copy; 2024 Harsh Bhagat. All rights reserved.</span>
+        <span>Made with precision in India</span>
+      </div>
     </div>
   </div>
 </footer>
 
 <!-- ============ FLOATING TG ============ -->
-<a class="wa-float cta-subscribe" data-cta-name="Floating Telegram" href="https://t.me/+4ujg66grDs8xZjll" target="_blank" rel="noopener" aria-label="Join Telegram">
+<a href="https://t.me/+4ujg66grDs8xZjll" target="_blank" rel="noopener" class="wa-float cta-subscribe" data-cta-name="Float TG" aria-label="Telegram">
   <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.88 9.9c0 5.44-4.44 9.87-9.89 9.87zm8.42-18.3A11.8 11.8 0 0 0 12.04 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.05 24l6.3-1.65a11.9 11.9 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.4z"/></svg>
 </a>
 
-<!-- ============ MOBILE STICKY BOTTOM CTA ============ -->
+<!-- ============ MOBILE STICKY CTA ============ -->
 <div class="mobile-sticky-cta" id="stickyCta">
-  <a class="btn btn-ghost cta-subscribe" data-cta-name="Sticky View Signals" href="#signals">View Signals</a>
-  <a class="btn btn-gold cta-subscribe" data-cta-name="Sticky Join Free" href="https://t.me/+4ujg66grDs8xZjll" target="_blank" rel="noopener">Join Free</a>
+  <a href="#signals" class="btn btn-ghost">Signals</a>
+  <a href="https://t.me/+4ujg66grDs8xZjll" target="_blank" rel="noopener" class="btn btn-gold cta-subscribe" data-cta-name="Sticky Mobile Join">
+    Join Free
+  </a>
 </div>
 
-<!-- ============ JAVASCRIPT ============ -->
 <script>
 (function(){
+  // Nav scrolled state
   const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 20;
+    nav.classList.toggle('scrolled', scrolled);
+    
+    // Mobile Sticky CTA visibility
+    const stickyCta = document.getElementById('stickyCta');
+    if (window.scrollY > 600) {
+      stickyCta.classList.add('visible');
+    } else {
+      stickyCta.classList.remove('visible');
+    }
+  });
 
-  /* Hamburger */
+  // Hamburger toggle
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-  let menuOpen = false;
-  function toggleMenu(){
-    menuOpen = !menuOpen;
-    hamburger.classList.toggle('active', menuOpen);
-    mobileMenu.classList.toggle('open', menuOpen);
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
+  
+  function toggleMenu(forceClose = false) {
+    if (forceClose) {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+      return;
+    }
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
   }
-  hamburger.addEventListener('click', toggleMenu);
-  mobileMenu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){ if(menuOpen) toggleMenu(); });
+  
+  hamburger.addEventListener('click', () => toggleMenu());
+  
+  document.querySelectorAll('.mob-link').forEach(link => {
+    link.addEventListener('click', () => toggleMenu(true));
   });
 
-  /* Sticky CTA */
-  const stickyCta = document.getElementById('stickyCta');
-  const heroSection = document.querySelector('.hero');
-  const stickyIO = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      stickyCta.classList.toggle('visible', !e.isIntersecting);
-    });
-  }, {threshold: 0});
-  if(heroSection) stickyIO.observe(heroSection);
-
-  /* Reveal */
+  // Reveal animations
   const reveals = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
-  }, {threshold:0.1, rootMargin:'0px 0px -30px 0px'});
-  reveals.forEach(el => io.observe(el));
-
-  /* Card glow desktop only */
-  if(window.matchMedia('(hover:hover)').matches){
-    document.querySelectorAll('.card').forEach(c => {
-      c.addEventListener('mousemove', e => {
-        const r = c.getBoundingClientRect();
-        c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-        c.style.setProperty('--my', (e.clientY - r.top) + 'px');
-      });
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        revealObserver.unobserve(entry.target);
+      }
     });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  
+  reveals.forEach(el => revealObserver.observe(el));
+
+  // Progress fills
+  const procFills = document.querySelectorAll('.proc-fill');
+  const procObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const w = entry.target.getAttribute('data-w');
+        entry.target.style.width = w + '%';
+        procObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  procFills.forEach(el => procObserver.observe(el));
+
+  // Ring fills
+  const ringFgs = document.querySelectorAll('.ring-fg');
+  const ringObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const off = entry.target.getAttribute('data-off');
+        entry.target.style.strokeDashoffset = off;
+        ringObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  ringFgs.forEach(el => ringObserver.observe(el));
+
+  // Particles Canvas
+  const particlesCanvas = document.getElementById('particles');
+  if (particlesCanvas) {
+    const pctx = particlesCanvas.getContext('2d');
+    let particles = [];
+    let pW, pH;
+
+    function resizeParticles() {
+      pW = particlesCanvas.width = particlesCanvas.offsetWidth;
+      pH = particlesCanvas.height = particlesCanvas.offsetHeight;
+      const count = window.innerWidth < 768 ? 25 : 60;
+      particles = [];
+      for(let i=0; i<count; i++){
+        particles.push({
+          x: Math.random() * pW,
+          y: Math.random() * pH,
+          r: Math.random() * 1.5 + 0.5,
+          vx: (Math.random() - 0.5) * 0.2,
+          vy: (Math.random() - 0.5) * 0.2,
+          alpha: Math.random() * 0.5 + 0.1
+        });
+      }
+    }
+
+    function drawParticles() {
+      pctx.clearRect(0, 0, pW, pH);
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if(p.x < 0 || p.x > pW) p.vx *= -1;
+        if(p.y < 0 || p.y > pH) p.vy *= -1;
+        pctx.beginPath();
+        pctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        pctx.fillStyle = `rgba(212, 175, 55, ${p.alpha})`;
+        pctx.fill();
+      });
+      requestAnimationFrame(drawParticles);
+    }
+
+    resizeParticles();
+    drawParticles();
+    window.addEventListener('resize', resizeParticles);
   }
 
-  /* Subscribe event */
-  function fireSubscribe(ctaName) {
-    if (typeof fbq === 'function') {
-      fbq('track', 'Subscribe', { content_name: ctaName, content_category: 'CTA Click' });
+  // Wave Canvas
+  const waveCanvas = document.getElementById('wave');
+  if (waveCanvas) {
+    const wctx = waveCanvas.getContext('2d');
+    let wW, wH;
+    let waveOffset = 0;
+
+    function resizeWave() {
+      wW = waveCanvas.width = waveCanvas.offsetWidth;
+      wH = waveCanvas.height = waveCanvas.offsetHeight;
     }
+
+    function drawWave() {
+      wctx.clearRect(0, 0, wW, wH);
+      
+      // Gradient fill
+      const grad = wctx.createLinearGradient(0, 0, wW, 0);
+      grad.addColorStop(0, 'rgba(212, 175, 55, 0.1)');
+      grad.addColorStop(0.5, 'rgba(240, 215, 123, 0.4)');
+      grad.addColorStop(1, 'rgba(212, 175, 55, 0.1)');
+      
+      wctx.beginPath();
+      wctx.moveTo(0, wH / 2);
+      
+      for(let x = 0; x <= wW; x += 5) {
+        const y1 = Math.sin((x + waveOffset) * 0.02) * (wH * 0.2) + (wH / 2);
+        const y2 = Math.sin((x + waveOffset) * 0.04) * (wH * 0.1);
+        wctx.lineTo(x, y1 + y2);
+      }
+      
+      wctx.strokeStyle = grad;
+      wctx.lineWidth = 1.5;
+      wctx.stroke();
+
+      // Fill
+      wctx.lineTo(wW, wH);
+      wctx.lineTo(0, wH);
+      wctx.closePath();
+      wctx.fillStyle = 'rgba(212, 175, 55, 0.05)';
+      wctx.fill();
+
+      waveOffset += 1;
+      requestAnimationFrame(drawWave);
+    }
+
+    resizeWave();
+    drawWave();
+    window.addEventListener('resize', resizeWave);
   }
-  document.querySelectorAll('.cta-subscribe').forEach(function(el) {
-    el.addEventListener('click', function() {
-      fireSubscribe(el.getAttribute('data-cta-name') || 'Unknown CTA');
+  
+  // Card hover spotlight
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mx', x + 'px');
+      card.style.setProperty('--my', y + 'px');
     });
   });
-
-  /* Particles */
-  const canvas = document.getElementById('particles');
-  const ctx = canvas.getContext('2d');
-  let W, H, particles = [];
-  const isMobile = window.innerWidth < 768;
-  const COUNT = isMobile ? 25 : 55;
-  const CONNECT_DIST = isMobile ? 80 : 120;
-  function resize(){
-    W = canvas.width = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-  }
-  window.addEventListener('resize', resize);
-  resize();
-  for(let i = 0; i < COUNT; i++){
-    particles.push({
-      x: Math.random()*W, y: Math.random()*H,
-      vx: (Math.random()-.5)*.3, vy: (Math.random()-.5)*.3,
-      r: Math.random()*1.2+.4
-    });
-  }
-  function drawParticles(){
-    ctx.clearRect(0,0,W,H);
-    for(let i=0;i<particles.length;i++){
-      const p=particles[i];
-      p.x+=p.vx; p.y+=p.vy;
-      if(p.x<0)p.x=W; if(p.x>W)p.x=0;
-      if(p.y<0)p.y=H; if(p.y>H)p.y=0;
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle='rgba(212,175,55,0.25)';
-      ctx.fill();
-      for(let j=i+1;j<particles.length;j++){
-        const q=particles[j];
-        const dx=p.x-q.x, dy=p.y-q.y;
-        const dist=Math.sqrt(dx*dx+dy*dy);
-        if(dist<CONNECT_DIST){
-          ctx.beginPath();
-          ctx.moveTo(p.x,p.y);
-          ctx.lineTo(q.x,q.y);
-          ctx.strokeStyle='rgba(212,175,55,'+(0.08*(1-dist/CONNECT_DIST))+')';
-          ctx.lineWidth=.4;
-          ctx.stroke();
-        }
-      }
-    }
-    requestAnimationFrame(drawParticles);
-  }
-  drawParticles();
-
-  /* Waveform */
-  const waveCanvas = document.getElementById('wave');
-  const wCtx = waveCanvas.getContext('2d');
-  let wW, wH, waveOffset = 0;
-  const waveData = [];
-  for(let i=0;i<120;i++) waveData.push(Math.sin(i*.12)*30+Math.sin(i*.05)*15+Math.sin(i*.25)*8);
-  function resizeWave(){
-    wW = waveCanvas.width = waveCanvas.offsetWidth*2;
-    wH = waveCanvas.height = waveCanvas.offsetHeight*2;
-  }
-  window.addEventListener('resize', resizeWave);
-  resizeWave();
-  function drawWave(){
-    wCtx.clearRect(0,0,wW,wH);
-    waveOffset+=.03;
-    const grad=wCtx.createLinearGradient(0,0,wW,0);
-    grad.addColorStop(0,'rgba(212,175,55,0.05)');
-    grad.addColorStop(0.5,'rgba(212,175,55,0.5)');
-    grad.addColorStop(1,'rgba(240,215,123,0.8)');
-    const fillGrad=wCtx.createLinearGradient(0,0,0,wH);
-    fillGrad.addColorStop(0,'rgba(212,175,55,0.12)');
-    fillGrad.addColorStop(1,'rgba(212,175,55,0)');
-    wCtx.beginPath();
-    const step=wW/(waveData.length-1);
-    for(let i=0;i<waveData.length;i++){
-      const y=wH/2+(waveData[i]+Math.sin(waveOffset+i*.08)*8)*(wH/100);
-      if(i===0)wCtx.moveTo(0,y); else wCtx.lineTo(i*step,y);
-    }
-    wCtx.strokeStyle=grad; wCtx.lineWidth=2; wCtx.stroke();
-    wCtx.lineTo(wW,wH); wCtx.lineTo(0,wH); wCtx.closePath();
-    wCtx.fillStyle=fillGrad; wCtx.fill();
-    requestAnimationFrame(drawWave);
-  }
-  drawWave();
-
-  /* Dashboard animations */
-  let dashAnimated = false;
-  const dashIO = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if(e.isIntersecting && !dashAnimated){
-        dashAnimated = true;
-        document.querySelectorAll('.proc-fill').forEach(el => { el.style.width = el.dataset.w + '%'; });
-        document.querySelectorAll('.ring-fg').forEach(el => { el.style.strokeDashoffset = el.dataset.off; });
-      }
-    });
-  }, {threshold:0.2});
-  const dashEl = document.querySelector('.dashboard');
-  if(dashEl) dashIO.observe(dashEl);
-
 })();
 </script>
 </body>
